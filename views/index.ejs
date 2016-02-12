@@ -5,13 +5,16 @@
     </head>
 	<title>
 	</title>
-    <body>
+    <body ng-controller="controller">
         <%include templates/jqueryImports.ejs%>
 	  <script>
         <%include templates/sideNav.ejs%>
 	  </script>
 	    <header><%include templates/header.ejs%></header>
 	    <main>
+            <div ng-repeat="cur in news">
+                {{ cur.campusNews.testing }}
+            </div>
         </main>
 	    <% include templates/angular.ejs %>
     </body>
